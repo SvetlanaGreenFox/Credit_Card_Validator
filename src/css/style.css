@@ -62,5 +62,49 @@ a:active,
 a:hover,
 a {
   text-decoration: none;
+  color: #5cb85c;
+}
+
+.active {
   color: #fc2362;
 }
+
+.wrap_modal {
+  /* visibility: hidden; */
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  width: 200px;
+  height: 150px;
+  background: #ddeefc;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 2em;
+  border: solid 1px white;
+  border-radius: 15px;
+  color: #fc2362;
+}
+
+.close_popup {
+  position: fixed;
+  top: 10px;
+  left: 160px;
+  background-color: #5cb85c;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
