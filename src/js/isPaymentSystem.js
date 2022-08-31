@@ -1,6 +1,6 @@
 /* eslint linebreak-style: ["error", "windows"] */
 
-const isCard = (setValue) => {
+const isPaymentSystem = (setValue) => {
   const firstNumbers = setValue.substring(0, 2);
 
   // eslint-disable-next-line default-case
@@ -33,4 +33,4 @@ const isCard = (setValue) => {
   }
 };
 
-export default isCard;
+export default isPaymentSystem;

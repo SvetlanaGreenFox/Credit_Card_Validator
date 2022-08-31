@@ -1,5 +1,9 @@
+/* eslint linebreak-style: ["error", "windows"] */
+
 const path = require('path');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+// eslint-disable-next-line import/no-extraneous-dependencies
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
@@ -34,6 +38,13 @@ module.exports = {
       {
         test: /\.svg$/,
         type: 'asset/resource',
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          publicPath: 'assets',
+        },
       },
     ],
   },

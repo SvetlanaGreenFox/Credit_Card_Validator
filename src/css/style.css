@@ -108,3 +108,7 @@ a {
   cursor: pointer;
 }
 
+.card.visa {
+  background-image: url('../../images/visa_curved.png');
+}
+
