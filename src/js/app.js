@@ -43,6 +43,12 @@ function init() {
 
   buttonElement.addEventListener('click', (e) => {
     e.preventDefault();
+    if (isValidCard(inputElement.value)) {
+      const tagName = isPaymentSystem(inputElement.value);
+      activateElement(tagName);
+    }
+
+    inputElement.value = '';
   });
 }
 
