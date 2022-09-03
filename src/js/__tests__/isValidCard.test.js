@@ -1,14 +1,16 @@
 import isValidCard from '../isValidCard';
+import correctCards from '../__fixtures__/correctCards';
+import incorrectCards from '../__fixtures__/incorrectСards';
 
 test('should validate card', () => {
-  expect(isValidCard('4916503920759477')).toBeTruthy();
-  expect(isValidCard('5296671740583265')).toBeTruthy();
-  expect(isValidCard('3537010632807793')).toBeTruthy();
-  expect(isValidCard('6387341345303612')).toBeTruthy();
-  expect(isValidCard('4913288533693460')).toBeTruthy();
-  expect(isValidCard('372898370024520')).toBeTruthy();
+  for (const card of correctCards) {
+    const { value } = card;
+    for (const num of value) {
+      expect(isValidCard(num)).toBeTruthy();
+    }
+  }
 
-  expect(isValidCard(6387341345303)).not.toBeTruthy();
-  expect(isValidCard('')).not.toBeTruthy();
-  expect(isValidCard(null)).not.toBeTruthy();
+  for (const card of incorrectCards) {
+    expect(isValidCard(card)).not.toBeTruthy();
+  }
 });

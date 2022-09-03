@@ -10,6 +10,9 @@ const isPaymentSystem = (setValue) => {
 
     case '2':
       return 'mir';
+
+    case '5':
+      return 'master';
   }
 
   switch (firstNumbers) {
