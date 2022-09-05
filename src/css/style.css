@@ -65,8 +65,30 @@ a {
   color: #5cb85c;
 }
 
-.active {
-  color: #fc2362;
+.card {
+  display: none;
+  background-position: 0 0;
+  margin-right: 4px;
+}
+
+.cards__wrapper {
+  display: flex;
+  flex-direction: row;
+	margin-bottom: 20px;
+}
+
+.card__wrapper {
+	width: 39px;
+  height: 25px;
+  margin-right: 4px;
+}
+
+.hidden {
+  filter: brightness(70%);
+}
+
+img {
+  width: 100%;
 }
 
 .wrap_modal {
@@ -108,7 +130,4 @@ a {
   cursor: pointer;
 }
 
-.card.visa {
-  background-image: url('../../images/visa_curved.png');
-}
 
