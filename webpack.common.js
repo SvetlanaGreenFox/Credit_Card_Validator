@@ -10,7 +10,7 @@ module.exports = {
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: './',
   },
   module: {
     rules: [
@@ -42,9 +42,6 @@ module.exports = {
       {
         test: /\.(png|jpe?g|gif)$/i,
         loader: 'file-loader',
-        // options: {
-        //   publicPath: 'assets',
-        // },
       },
     ],
   },
